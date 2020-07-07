@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+  <head>
+    <title></title>
+    <style>
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+                display: block;
+        }
+        body {
+                line-height: 1.56;
+        }
+        ol, ul {
+                list-style: none;
+        }
+        blockquote, q {
+                quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+                content: '';
+                content: none;
+        }
+        table {
+                border-collapse: collapse;
+                border-spacing: 0;
+        }
+
+
+        html {
+            background: #29344c;
+            color: #fff;
+            font: 15px Inter, sans-serif;
+            font-weight: 400;
+            text-rendering: geometricPrecision;
+        }
+        p {
+            line-height: 1.56;
+            margin: 1em 0;
+        }
+        .container {
+            max-width: 360px;
+            margin: 45px 60px 100px;
+        }
+        .header {
+            margin: 2em 0 3em;
+            color: #7f8694;
+        }
+        h1 { font-size: 1.331em; margin: 1.331em 0; }
+        h2 { font-size: 1.21em; margin: 1.21em 0; }
+        h3, h4, h5, h6 { font-size: 1.1em; margin: 1.1em 0; }
+        a:link {
+            color: #fff;
+        }
+        a:visited {
+            color: #7f8694;
+        }
+        ul {
+            list-style-type: circle;
+            padding-left: 2em;
+            margin: 0.8em 0;
+        }
+        ol {
+            list-style: decimal;
+            padding-left: 2em;
+            margin: 0.8em 0;
+        }
+        li {
+            padding: 0.2em 0;
+        }
+        hr {
+            margin: 2em 0 2.1em;
+            border: none;
+            border-bottom: 1px solid #4c5669;
+        }
+    </style>
+    <link type="text/css" rel="stylesheet" href="/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">markdown template</div>
+      <div id="main"></div>
+    </div>
+    <script type="text/javascript" src="/markdown-it.min.js"></script>
+    <script type="text/javascript">
+      const mdoc = `
+# The Symbol Complex
+
+Dignissim elementum felis lacinia ipsum ornare id quam nullam, venenatis habitasse mauris pharetra condimentum pellentesque tristique class, enim neque sollicitudin ultrices torquent senectus posuere. Lobortis vivamus rhoncus erat dictum tellus turpis ligula senectus, id phasellus facilisi leo quam nullam sed ornare, quis lacus euismod vitae ante litora natoque. A semper hac tortor cursus ut est facilisi imperdiet, fames nascetur aenean placerat eros curae ad, rhoncus ipsum ornare cubilia in congue vulputate.
+
+[Risus aenean augue tristique mus primis.](https://google.com)
+
+- Molestie vivamus dolor per
+- Ultricies consequat vel
+- Habitant vulputate orci velit venenatis nostra aliquam lacus commodo porta torquent dui
+
+Inceptos faucibus velit enim vivamus dui in sollicitudin ac tincidunt platea elit, fermentum maecenas pretium ridiculus magnis duis semper convallis facilisi viverra molestie, adipiscing dis mollis justo sem interdum curae aliquam eu pharetra. Placerat habitant auctor ac vitae rutrum viverra amet, et nisi inceptos lacinia ridiculus arcu augue nibh, dis cubilia vel bibendum velit donec. Risus egestas arcu cursus augue quisque libero, posuere ac eros imperdiet elementum. Duis taciti viverra volutpat mus fusce lobortis congue mauris lectus, felis pulvinar urna fringilla sagittis habitant tempor facilisis lorem, turpis ultrices vehicula euismod enim laoreet commodo posuere. Feugiat mus et bibendum enim diam urna, dictumst ac ante penatibus vulputate, cursus ridiculus at netus vel.
+
+---
+
+Conubia tempor accumsan fermentum hendrerit elementum montes dictumst, faucibus quisque litora vehicula nisl vivamus fringilla, cum aliquam consequat cubilia nisi facilisi. Cubilia felis mus tristique urna placerat, primis auctor purus quis dictumst praesent, maecenas nisl porta consequat.
+
+Per eleifend luctus purus sociis congue consectetur tristique laoreet, fames ridiculus iaculis placerat vivamus id magnis libero, auctor quam vestibulum pellentesque ultrices faucibus dictumst.
+
+Nulla morbi sodales aptent fusce volutpat habitant congue sociis, curae suspendisse facilisi faucibus class eros gravida, adipiscing ante egestas proin lectus pellentesque taciti.
+`;
+      document.getElementById("main").innerHTML = markdownit().render(mdoc.trim());
+    </script>
+  </body>
+</html>
